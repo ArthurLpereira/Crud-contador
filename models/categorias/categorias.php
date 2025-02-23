@@ -15,14 +15,14 @@
             $stmt->bindParam(':nome', $nome_categoria);
             return $stmt->execute();
         }
-
+        // Testado
         public function Listar_Categorias(){
             $sql = 'SELECT * FROM categorias;';
             $stmt = $this->pdo->prepare($sql);
             $stmt->execute();
             return $stmt->fetchAll(PDO::FETCH_ASSOC);
         }
-
+        // Testado
         public function Atualizar_Categoria($id ,$nome_categoria, $ativo ){
             $sql = 'UPDATE categorias SET nome_categoria=:nome,ativa_categoria =:ativo WHERE id_categoria = :id;';
             $stmt = $this->pdo->prepare($sql);
