@@ -9,7 +9,7 @@
             $this->pdo = $pdo;
         }
         // Testado
-        public function Criar_categoria($nome_categoria){
+        public function Criar_Categoria($nome_categoria){
             $sql = 'INSERT INTO categorias (nome_categoria,ativa_categoria) VALUES (:nome, 1 );';
             $stmt = $this->pdo->prepare($sql);
             $stmt->bindParam(':nome', $nome_categoria);

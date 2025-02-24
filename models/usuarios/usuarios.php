@@ -40,7 +40,7 @@ class Usuarios
         return $stmt->execute();
     }
 
-    public function Excluir_Funcionario($id){
+    public function Excluir_Usuario($id){
         $sql = 'DELETE FROM `usuarios` WHERE id_usuario = :id;';
         $stmt = $this->pdo->prepare($sql);
         $stmt->bindParam(':id', $id);
